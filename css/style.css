@@ -290,7 +290,11 @@ Thumbnails - Predefined bootstrap's thumbnail class.
   border-radius:0;
   box-shadow:none;
   text-align:center;
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)), linear-gradient(to bottom, #000, #000 2px, #111 3px);
+	background-repeat: repeat-y;
+	background-position: center center;
+	background-size: cover, 100% 3px;
   background-repeat: repeat-y;
   background-position: center center;
   background-size: cover, 100% 3px;
@@ -370,14 +374,14 @@ Thumbnails - Predefined bootstrap's thumbnail class.
   margin-bottom: 20px;
   padding: 0;
 }
-.section .title, .competences-title > p { /* sections noir */
+.section .title, .competences-title, .project-space > p { /* sections noir */
   font-size: 20px;
   color: #FFF;
   font-weight: lighter;
 }
 
 /* SECTIONS TEXTE BLANC */
-.primary-section, .navbar-inner, .navbar, .single-project, footer {
+.primary-section, .navbar-inner, .navbar, .single-project, footer  {
 	background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)), linear-gradient(to bottom, #000, #000 2px, #111 3px);
 	background-repeat: repeat-y;
 	background-position: center center;
@@ -394,7 +398,8 @@ Thumbnails - Predefined bootstrap's thumbnail class.
 
 /* SECTIONS TEXTES NOIR */
 .secondary-section {
-  background-color: #FFFAF0;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;
+  /* background-color: #FFFAF0; */
   /* background:#FECE1A; */
 }
 .secondary-section h2, .team h2, .primary-section h2  {
@@ -482,7 +487,7 @@ span {
   color: #000;
   font-weight: 100;
   font-size: 1.5rem;
-  top: 60px;
+  top: 68px;
 }
 header span:before {
   display: block;
@@ -516,14 +521,15 @@ header span:after {
 	position: absolute;
 	top: -5%;
 	left: -5%;
-	opacity: 0.13;
-	background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg")
-	  repeat center center;
+	/* opacity: 0.13; */
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;
+	/* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg")
+	repeat center center;
 	-webkit-animation: grain 0.5s steps(1) infinite;
-	animation: grain 0.5s steps(1) infinite;
-	/* z-index: -1; */
-  }
-/* Film bg Animations */
+	animation: grain 0.5s steps(1) infinite;*/
+	z-index: -1;  
+  } 
+/*Film bg Animations */
 @keyframes grain {
   0%, 100% {
 	transform: translate(0);
@@ -916,6 +922,7 @@ header span:after {
     vertical-align: bottom;
     margin-top: 250px;
   }
+  
   .btn:focus {
     outline: none;
   }
@@ -1467,14 +1474,13 @@ Expériences
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #FFFEFE;
-  outline: 10px solid #161616;
   display: block; 
   margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
-  top: 0;
-  left: 2.5em;
-  width: 1em;
-  height: 1em;
+  top: -0.5em;
+  left: 2.1em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .timeline-event-thumbnail {
@@ -1757,9 +1763,6 @@ Projets
   font-size: 1rem;
   font-weight: 600;
 }
-.projets-section p {
-  font-size: 0.8rem;
-}
 #single-project {
 	margin-bottom: 70px;
 }
@@ -1936,10 +1939,10 @@ Sroll
 	line-height: 20px;
 	vertical-align: middle;
   }
-  .section {
+  /* .section {
 	padding-left:20px;
 	padding-right:20px;
-  }
+  } */
   .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -1984,12 +1987,45 @@ Sroll
 	margin-top:30px;
   }
 }
+@media (max-width:480px) {
+  body {
+    width:100%;
+  }
+  .container-bis {
+    top: 2.5%;
+}
+  .nav-pills {
+    margin: 0 0 30px 15px;
+}
+  .timeline-event-copy {
+    padding: 1em 0 1em 1em;
+    top: -0.875em;
+    left: 2em;
+    width: 83%;
+}
+  .texte-nom, .glow {
+    font-size: 8vw;
+  }
+  .subtitle {
+    font-size: 1.8vw;
+  }
+  span {
+    top: 96px;
+  }
+  .texte-nom, .glow {
+    line-height: 28px;
+  }
+  .c-glitch.span2 {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .section1 {
+    margin-top: 90px;
+}
+}
 
 /* ****************************************** */
 
-/* .container{
-  position: relative;
-} */
 .logo-footer{
   margin-bottom: 40px;
 }
